@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color: rgb(105, 102, 161);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.clearfix{
+    clear: both;
+}
+
+.container{
+    width: 600px;
+    margin:  50px auto;
+    border: 2px dashed #fff;
+    padding: 10px;
+    font-size: 26px;
+    position: relative;
+    overflow: hidden;
+}
+.container::before{
+    content: 'red car won';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #782879;
+    top:-100%;
+    left: 0;
+    z-index: 3;
+    line-height: 250px;
+    text-align: center;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: white;
+    animation: slide 3s linear 18s 1 forwards;
+    -webkit-animation: slide 3s linear 18s 1 forwards;
+}
+.container h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+.race-box{
+    margin: 10px 0;
+}
+.num , 
+ .car{
+    float: left;
+}
+.race-box .num{
+    width: 75px;
+}
+.race-box .num span{
+    display: inline-block;
+    border: 1px dashed ;
+    color: #fff;
+    padding: 0px 5px;
+    margin-right: 5px;
+    opacity: 0;
+    animation: appearnum 1s linear  1 forwards;
+    -webkit-animation: appearnum 1s linear  1 forwards;
+}
+
+.race-box .car{
+    width: 500px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+.race-box .car span{
+  display: inline-block;
+  animation: torightcar 2s linear 2s 1 forwards;
+  -webkit-animation: torightcar 2s linear 2s 1 forwards;
+}
+.race-box .car i{
+    line-height: 30px;
+}
+
+.race-box2 .car , .race-box4 .car{
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+.race-box1 .car span{
+    color: #d2d9e9;
+    display: inline-block;
+    animation: torightcar 2s linear 2s 1 forwards;
+    -webkit-animation: torightcar 2s linear 2s 1 forwards;
+  }
+  .race-box1 .num span{
+    animation: appearnum 1s linear 4s 1 forwards;
+    -webkit-animation: appearnum 1s linear 4s 1 forwards;
+}
+.race-box2 .car span{
+    color: #5f1515;
+    display: inline-block;
+    animation: torightcar 4s ease-in 5s 1 forwards;
+    -webkit-animation: torightcar 4s ease-in 5s 1 forwards;
+}
+.race-box2 .num span{
+    animation: appearnum 1s linear 9s 1 forwards;
+    -webkit-animation: appearnum 1s linear 9s 1 forwards;
+}
+.race-box3 .car span{
+    color: #6c066e;
+    display: inline-block;
+    animation: torightcar 2s ease-out 10s 1 forwards;
+    -webkit-animation: torightcar 2s ease-out 10s 1 forwards;
+}
+.race-box3 .num span{
+    animation: appearnum 1s linear 12s 1 forwards;
+    -webkit-animation: appearnum 1s linear 12s 1 forwards;
+}
+.race-box4 .car span{
+    display: inline-block;
+    animation: torightcar 3s linear 13s 1 forwards;
+    -webkit-animation: torightcar 3s linear 13s 1 forwards;
+}
+.race-box4 .num span{
+    animation: appearnum 1s linear 16s 1 forwards;
+    -webkit-animation: appearnum 1s linear 16s 1 forwards;
+}
+/* animation-----------------------------------------> */
+
+@keyframes torightcar{
+    0%{
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+100%{
+    transform: translateX(460px);
+    -webkit-transform: translateX(460px);
+    -moz-transform: translateX(460px);
+    -ms-transform: translateX(460px);
+    -o-transform: translateX(460px);
+}
+}
+
+
+
+@keyframes appearnum{
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes slide{
+    0%{
+        top: -100%;
+
+    }
+    
+    100%{
+        top: 0;
+    }
+}
